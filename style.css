@@ -30,6 +30,7 @@ body{
 }
 
 .user-input{
+    margin-top: 2px;
     width: 350px;
     text-align: center;
 }
@@ -55,7 +56,7 @@ body{
 }
 
 .user-input button:hover{
-    background-color: transparent;
+    background-color: white;
     color: white;
 }
 
@@ -65,6 +66,7 @@ body{
 }
 
 .items{
+    background-color: white;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -77,12 +79,12 @@ body{
     text-transform: uppercase;
 }
 
-.item:hover{
+.items:hover{
     box-shadow: 0 0 20px #e22865;
     border: 1px solid #e22865;
 }
 
-.item i{
+.items i{
     cursor: pointer;
     margin: 0 5px;
 }
