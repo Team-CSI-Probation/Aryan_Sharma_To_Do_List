@@ -1,6 +1,7 @@
 const toDoItems = document.getElementsByClassName("to-do-items")[0];
 const input = document.getElementById("input");
 const trashIcon = document.getElementById("trash");
+const editButton = document.getElementById("Button");
 
 input.addEventListener("keydown", function(event){
     if(event.key === "Enter")
@@ -12,9 +13,18 @@ function addItem(){
     var divChild = document.createElement("div");
     var checkIcon = document.createElement("i");
     var trashIcon = document.createElement("i");
+    var editButton = document.createElement("i")
 
     divParent.className = "items";
     divParent.innerHTML = '<div>'+input.value+'</div>';
+
+    editButton.className = "fas fa-user-edit";
+    editButton.style.color = "lightgray";
+    editButton.addEventListener("click",function(){
+        edit.input.addEventListener
+    });
+
+    divChild.appendChild(editButton);
 
     checkIcon.className = "fas fa-check-square";
     checkIcon.style.color = "lightgray";
@@ -22,6 +32,7 @@ function addItem(){
         checkIcon.style.color = "limegreen";
     })
     
+
     divChild.appendChild(checkIcon);
 
     trashIcon.className = "fas fa-trash"
@@ -38,3 +49,7 @@ function addItem(){
 
     input.value = '';
 }
+
+
+edit(input)
+    input.disabled = !input.disabled;
